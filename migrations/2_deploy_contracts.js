@@ -1,5 +1,5 @@
-const DappToken = artifacts.require("./DappToken.sol");
+const Roh = artifacts.require("./Roh.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(DappToken);
+  deployer.deploy(Roh,1000000);
 };
