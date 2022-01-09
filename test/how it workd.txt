@@ -1,0 +1,5 @@
+1. provision tokens to the token sale contract
+2. set atoken price in wei
+3. assign an admin
+4. buy tokens
+5. end sale 

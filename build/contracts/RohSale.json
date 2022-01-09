@@ -1,0 +1,607 @@
+{
+  "contractName": "RohSale",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract Roh",
+          "name": "_tokenContract",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "tokenContract",
+      "outputs": [
+        {
+          "internalType": "contract Roh",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract Roh\",\"name\":\"_tokenContract\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"tokenContract\",\"outputs\":[{\"internalType\":\"contract Roh\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Kailas/token-sale/contracts/RohSale.sol\":\"RohSale\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Kailas/token-sale/contracts/Roh.sol\":{\"keccak256\":\"0xe3caecbbd571175fce88ecad50b861bea9e1db1a555ee8872a51189d2a7f2e22\",\"urls\":[\"bzz-raw://3e007780b27bc75291d6d0e247b88a9cb54f5321d8a1e69a2733056c86449bfb\",\"dweb:/ipfs/QmeQ4ff28DyQ3UTDp2b5qUmj3Djh3SJEaH6gkH4nqJnuNm\"]},\"/C/Users/Kailas/token-sale/contracts/RohSale.sol\":{\"keccak256\":\"0x96d26709ffb4c050427e42471f220cf57190254a7362d95d2c6caaca948c5329\",\"urls\":[\"bzz-raw://cadda3b7ae6be7e2b31f45131fef9288870490a2f15c30d7a5f598a89b3b3823\",\"dweb:/ipfs/Qmd3C3Y2DdBe1HyPEMpUZmKcvAMBftiRRzWMEwgeVSRo2c\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516101a43803806101a48339818101604052602081101561003357600080fd5b8101908080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555080600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505060d0806100d46000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c806355a373d614602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a723158204cb04b896026c1cd7f33f05116daa0766422f8a0179c33b9c97c9a11133524b364736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c806355a373d614602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea265627a7a723158204cb04b896026c1cd7f33f05116daa0766422f8a0179c33b9c97c9a11133524b364736f6c63430005100032",
+  "sourceMap": "46:396:2:-;;;114:325;8:9:-1;5:2;;;30:1;27;20:12;5:2;114:325:2;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;114:325:2;;;;;;;;;;;;;;;;253:10;247:5;;:16;;;;;;;;;;;;;;;;;;340:14;326:13;;:28;;;;;;;;;;;;;;;;;;114:325;46:396;;;;;;",
+  "deployedSourceMap": "46:396:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;46:396:2;;;;;;;;;;;;;;;;;;;85:24;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\nimport \"./Roh.sol\";\r\ncontract RohSale{\r\n  address admin;\r\n  Roh public tokenContract;\r\n  constructor(Roh _tokenContract) public{\r\n    //assign an admin - external account connected tot he blockchain with special powers\r\n  admin=msg.sender;// person who deployed the contract\r\n    //token contract-\r\n  tokenContract=_tokenContract;\r\n    //set token price- how much ether it will cost when we sell our token\r\n\r\n\r\n  }\r\n}\r\n",
+  "sourcePath": "C:\\Users\\Kailas\\token-sale\\contracts\\RohSale.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Kailas/token-sale/contracts/RohSale.sol",
+    "exportedSymbols": {
+      "RohSale": [
+        241
+      ]
+    },
+    "id": 242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 220,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/C/Users/Kailas/token-sale/contracts/Roh.sol",
+        "file": "./Roh.sol",
+        "id": 221,
+        "nodeType": "ImportDirective",
+        "scope": 242,
+        "sourceUnit": 219,
+        "src": "25:19:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 241,
+        "linearizedBaseContracts": [
+          241
+        ],
+        "name": "RohSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 223,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "67:13:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 222,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "67:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 225,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "85:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Roh_$218",
+              "typeString": "contract Roh"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 224,
+              "name": "Roh",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 218,
+              "src": "85:3:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Roh_$218",
+                "typeString": "contract Roh"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "152:287:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 230,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 223,
+                      "src": "247:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 231,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 256,
+                        "src": "253:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 232,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "253:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "247:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "247:16:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 237,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 235,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 225,
+                      "src": "326:13:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Roh_$218",
+                        "typeString": "contract Roh"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 236,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 227,
+                      "src": "340:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Roh_$218",
+                        "typeString": "contract Roh"
+                      }
+                    },
+                    "src": "326:28:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Roh_$218",
+                      "typeString": "contract Roh"
+                    }
+                  },
+                  "id": 238,
+                  "nodeType": "ExpressionStatement",
+                  "src": "326:28:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 240,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 227,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "126:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Roh_$218",
+                    "typeString": "contract Roh"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 226,
+                    "name": "Roh",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 218,
+                    "src": "126:3:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Roh_$218",
+                      "typeString": "contract Roh"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "125:20:2"
+            },
+            "returnParameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:0:2"
+            },
+            "scope": 241,
+            "src": "114:325:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 242,
+        "src": "46:396:2"
+      }
+    ],
+    "src": "0:444:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Kailas/token-sale/contracts/RohSale.sol",
+    "exportedSymbols": {
+      "RohSale": [
+        241
+      ]
+    },
+    "id": 242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 220,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "absolutePath": "/C/Users/Kailas/token-sale/contracts/Roh.sol",
+        "file": "./Roh.sol",
+        "id": 221,
+        "nodeType": "ImportDirective",
+        "scope": 242,
+        "sourceUnit": 219,
+        "src": "25:19:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 241,
+        "linearizedBaseContracts": [
+          241
+        ],
+        "name": "RohSale",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 223,
+            "name": "admin",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "67:13:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 222,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "67:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 225,
+            "name": "tokenContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 241,
+            "src": "85:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_Roh_$218",
+              "typeString": "contract Roh"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 224,
+              "name": "Roh",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 218,
+              "src": "85:3:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Roh_$218",
+                "typeString": "contract Roh"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 239,
+              "nodeType": "Block",
+              "src": "152:287:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 233,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 230,
+                      "name": "admin",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 223,
+                      "src": "247:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 231,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 256,
+                        "src": "253:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 232,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "253:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "247:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 234,
+                  "nodeType": "ExpressionStatement",
+                  "src": "247:16:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 237,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 235,
+                      "name": "tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 225,
+                      "src": "326:13:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Roh_$218",
+                        "typeString": "contract Roh"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 236,
+                      "name": "_tokenContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 227,
+                      "src": "340:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Roh_$218",
+                        "typeString": "contract Roh"
+                      }
+                    },
+                    "src": "326:28:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Roh_$218",
+                      "typeString": "contract Roh"
+                    }
+                  },
+                  "id": 238,
+                  "nodeType": "ExpressionStatement",
+                  "src": "326:28:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 240,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 228,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 227,
+                  "name": "_tokenContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 240,
+                  "src": "126:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_Roh_$218",
+                    "typeString": "contract Roh"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 226,
+                    "name": "Roh",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 218,
+                    "src": "126:3:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Roh_$218",
+                      "typeString": "contract Roh"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "125:20:2"
+            },
+            "returnParameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:0:2"
+            },
+            "scope": 241,
+            "src": "114:325:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 242,
+        "src": "46:396:2"
+      }
+    ],
+    "src": "0:444:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2022-01-08T17:22:30.244Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
